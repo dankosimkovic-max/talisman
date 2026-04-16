@@ -56,7 +56,7 @@ const Hero = () => (
           Váš osobný <br /> <span className="text-gradient">Talisman.</span>
         </h1>
         <p className="text-xl md:text-2xl text-text-secondary max-w-2xl mb-14 leading-relaxed font-light uppercase tracking-wide">
-          Prémiové šperky, ktoré zachytávajú momenty. Chirurgická oceľ pozlátená 18K zlatom pre nekonečný lesk a štýl.
+          Prémiové šperky, ktoré zachytávajú momenty. Chirurgická oceľ pozlátená 18K zlatom pre nekonečný lesk and štýl.
         </p>
         <div className="flex flex-col sm:flex-row gap-6 mb-24 justify-center md:justify-start">
           <button className="pill-button pill-button-primary px-10 py-4 text-base">
@@ -95,7 +95,7 @@ const Hero = () => (
     {/* Floating Visual Element */}
     <div className="absolute top-1/2 right-10 -translate-y-1/2 w-[35vw] h-[50vh] hidden lg:block rounded-3xl overflow-hidden glass p-4 rotate-3">
         <img 
-          src="https://images.unsplash.com/photo-1573408302185-9127ff5f6d33?auto=format&fit=crop&q=80&w=800" 
+          src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&q=80&w=800" 
           alt="Luxury Jewellery" 
           className="w-full h-full object-cover rounded-2xl opacity-80"
         />
@@ -118,7 +118,7 @@ const Transformation = () => (
           </p>
           <div className="space-y-6">
             {[
-              { t: "Obyčajný deň", s: "Bez iskry a detailov, ktoré vás definujú." },
+              { t: "Obyčajný deň", s: "Bez iskry and detailov, ktoré vás definujú." },
               { t: "Váš Talisman", s: "Jemný dotyk luxusu, ktorý priťahuje pohľady." },
               { t: "Vaša Aura", s: "Nekompromisné sebavedomie v každom geste." }
             ].map((item, i) => (
@@ -134,10 +134,10 @@ const Transformation = () => (
         </div>
         <div className="grid grid-cols-2 gap-4">
            <div className="aspect-[3/4] rounded-3xl overflow-hidden glass mt-12">
-              <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&q=80&w=600" className="w-full h-full object-cover opacity-70" alt="Detail" />
+              <img src="https://images.unsplash.com/photo-1620656715918-0883667c37ad?auto=format&fit=crop&q=80&w=600" className="w-full h-full object-cover opacity-70" alt="Detail" />
            </div>
            <div className="aspect-[3/4] rounded-3xl overflow-hidden glass">
-              <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&q=80&w=600" className="w-full h-full object-cover opacity-70" alt="Elegance" />
+              <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&q=80&w=600" className="w-full h-full object-cover opacity-70" alt="Elegance" />
            </div>
         </div>
       </div>
@@ -215,7 +215,7 @@ const MidCTA = () => (
         Získajte 10% zľavu <br /> na váš prvý nákup.
       </h2>
       <p className="text-xl text-text-secondary max-w-2xl mx-auto font-light uppercase tracking-wide">
-        Staňte sa súčasťou našej komunity a buďte prvou, kto sa dozvie o nových limitovaných kolekciách.
+        Staňte sa súčasťou našej komunity and buďte prvou, kto sa dozvie o nových limitovaných kolekciách.
       </p>
       <div className="flex flex-col sm:flex-row gap-6 justify-center pt-8">
         <input 
@@ -271,9 +271,9 @@ const SocialProof = () => (
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {[
-          { name: "Veronika K.", content: "Neskutočná kvalita! Prstene nosím denne, umývam s nimi riad a stále sú ako nové. Odporúčam všetkými desiatimi.", date: "Pred 2 dňami" },
+          { name: "Veronika K.", content: "Neskutočná kvalita! Prstene nosím denne, umývam s nimi riad and stále sú ako nové. Odporúčam všetkými desiatimi.", date: "Pred 2 dňami" },
           { name: "Lucia M.", content: "Balenie bolo také krásne, že som ho ani nechcela otvoriť. Šperky sú v skutočnosti ešte krajšie ako na fotkách.", date: "Pred týždňom" },
-          { name: "Jana S.", content: "Rýchle dodanie a komunikácia na jednotku. Určite si čoskoro objednám ďalšie kúsky do mojej zbierky.", date: "Pred 3 dňami" },
+          { name: "Jana S.", content: "Rýchle dodanie and komunikácia na jednotku. Určite si čoskoro objednám ďalšie kúsky do mojej zbierky.", date: "Pred 3 dňami" },
         ].map((r, i) => (
           <div key={i} className="p-12 glass rounded-[2.5rem] space-y-8 border border-white/5 relative">
             <Quote className="absolute top-10 right-10 w-12 h-12 text-white/5" />
@@ -375,8 +375,8 @@ const Comparison = () => (
 const FAQ = () => {
   const [open, setOpen] = useState(0);
   const faqs = [
-    { q: "Môžem sa so šperkami sprchovať?", a: "Áno, naše šperky z chirurgickej ocele s PVD pozlátením sú vysoko odolné voči vode a potu. Odporúčame však vyhnúť sa silným chemikáliám a bazénom s chlórom pre zachovanie maximálneho lesku." },
-    { q: "Sú šperky vhodné pre alergikov?", a: "Absolútne. Používame chirurgickú oceľ 316L, ktorá je známa svojou hypoalergénnosťou a bezpečnosťou aj pre veľmi citlivú pokožku. Neobsahujú žiaden nikel." },
+    { q: "Môžem sa so šperkami sprchovať?", a: "Áno, naše šperky z chirurgickej ocele s PVD pozlátením sú vysoko odolné voči vode and potu. Odporúčame však vyhnúť sa silným chemikáliám and bazénom s chlórom pre zachovanie maximálneho lesku." },
+    { q: "Sú šperky vhodné pre alergikov?", a: "Absolútne. Používame chirurgickú oceľ 316L, ktorá je známa svojou hypoalergénnosťou and bezpečnosťou aj pre veľmi citlivú pokožku. Neobsahujú žiaden nikel." },
     { q: "Aká je doba dodania?", a: "Objednávky odosielame obvykle do 24-48 hodín. Doručenie cez Zásilkovnu trvá väčšinou 2-3 pracovné dni." },
     { q: "Čo ak mi šperk nesadne?", a: "Ponúkame 14-dňovú lehotu na vrátenie alebo výmenu nenoseného tovaru bez udania dôvodu." }
   ];
