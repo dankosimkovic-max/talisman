@@ -7,7 +7,6 @@ import {
   Star, 
   ChevronDown,
   TrendingUp,
-  Zap,
   Play,
   Heart,
   Sparkles,
