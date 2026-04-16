@@ -95,7 +95,7 @@ const Hero = () => (
     {/* Floating Visual Element */}
     <div className="absolute top-1/2 right-10 -translate-y-1/2 w-[35vw] h-[50vh] hidden lg:block rounded-3xl overflow-hidden glass p-4 rotate-3">
         <img 
-          src="https://images.unsplash.com/photo-1599643477877-530eb83ad8ec?w=800&q=80" 
+          src="https://images.unsplash.com/photo-1573408302185-9127ff5f6d33?auto=format&fit=crop&q=80&w=800" 
           alt="Luxury Jewellery" 
           className="w-full h-full object-cover rounded-2xl opacity-80"
         />
@@ -134,10 +134,10 @@ const Transformation = () => (
         </div>
         <div className="grid grid-cols-2 gap-4">
            <div className="aspect-[3/4] rounded-3xl overflow-hidden glass mt-12">
-              <img src="https://images.unsplash.com/photo-1611085583191-a3b13b24424a?w=500&q=80" className="w-full h-full object-cover opacity-70" alt="Detail" />
+              <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&q=80&w=600" className="w-full h-full object-cover opacity-70" alt="Detail" />
            </div>
            <div className="aspect-[3/4] rounded-3xl overflow-hidden glass">
-              <img src="https://images.unsplash.com/photo-1620656715918-0883667c37ad?w=500&q=80" className="w-full h-full object-cover opacity-70" alt="Elegance" />
+              <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&q=80&w=600" className="w-full h-full object-cover opacity-70" alt="Elegance" />
            </div>
         </div>
       </div>
@@ -304,9 +304,16 @@ const UGCStrip = () => (
         <button className="text-[10px] font-bold uppercase tracking-[0.2em] border-b border-accent-gold pb-1 hover:text-accent-gold transition-colors">Sledovať nás</button>
       </div>
       <div className="flex gap-4 overflow-x-auto pb-8 no-scrollbar">
-        {[1,2,3,4,5,6].map(i => (
+        {[
+          "https://images.unsplash.com/photo-1620656715918-0883667c37ad?auto=format&fit=crop&q=80&w=400",
+          "https://images.unsplash.com/photo-1611085583191-a3b13b24424a?auto=format&fit=crop&q=80&w=400",
+          "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&q=80&w=400",
+          "https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&q=80&w=400",
+          "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&q=80&w=400",
+          "https://images.unsplash.com/photo-1599643477877-530eb83ad8ec?auto=format&fit=crop&q=80&w=400"
+        ].map((url, i) => (
           <div key={i} className="min-w-[240px] aspect-[9/16] rounded-[2rem] bg-bg-secondary relative group overflow-hidden shrink-0 border border-white/5">
-             <img src={`https://images.unsplash.com/photo-1611085583191-a3b13b24424a?w=400&q=80&idx=${i}`} className="w-full h-full object-cover opacity-50 group-hover:opacity-80 transition-opacity duration-700" alt="Instagram Story" />
+             <img src={url} className="w-full h-full object-cover opacity-50 group-hover:opacity-80 transition-opacity duration-700" alt="Instagram Story" />
              <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-12 h-12 rounded-full glass flex items-center justify-center text-white scale-0 group-hover:scale-100 transition-transform">
                    <Play size={20} fill="currentColor" />
