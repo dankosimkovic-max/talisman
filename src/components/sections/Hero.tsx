@@ -25,11 +25,11 @@ export const Hero = () => (
           Prémiové šperky, ktoré zachytávajú momenty. Chirurgická oceľ pozlátená 18K zlatom pre nekonečný lesk.
         </p>
         <div className="flex flex-col sm:flex-row gap-6 mb-24 justify-center md:justify-start">
-          <Button variant="primary" icon={ArrowRight} className="px-10 py-4 text-base">
-            Objaviť kolekciu
+          <Button variant="primary" icon={ArrowRight} className="px-10 py-4 text-base" onClick={() => document.getElementById('produkty')?.scrollIntoView()}>
+            Pozrieť produkty
           </Button>
-          <Button variant="secondary" className="px-10 py-4 text-base">
-            Naše bestsellery
+          <Button variant="secondary" className="px-10 py-4 text-base" onClick={() => document.getElementById('kvalita')?.scrollIntoView()}>
+            Prečo Talisman?
           </Button>
         </div>
       </motion.div>

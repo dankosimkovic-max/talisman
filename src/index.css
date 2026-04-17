@@ -86,12 +86,26 @@ section {
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   border: 1px solid var(--glass-border);
+  transition: var(--transition-luxury);
+}
+
+.glass:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--accent-gold);
+  transform: translateY(-8px);
+  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.5);
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, #fff 0%, var(--text-secondary) 100%);
+  background: linear-gradient(135deg, #B8860B 0%, #FFD700 50%, #B8860B 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  animation: shine 12s linear infinite;
+}
+
+@keyframes shine {
+  to { background-position: 200% center; }
 }
 
 .pill-button {
@@ -158,4 +172,31 @@ section {
   h2 { font-size: 10vw; }
   section { padding: 4rem 0; }
   .container { padding: 0 6vw; }
+}
+
+/* Shop UI Additions */
+.cart-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: var(--accent-gold);
+  color: #000;
+  font-size: 9px;
+  font-weight: 900;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toast-container {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }

@@ -1,6 +1,8 @@
+import { useState, useEffect } from 'react';
 import { Navbar } from './components/layout/Navbar';
 import { Footer } from './components/layout/Footer';
 import { Hero } from './components/sections/Hero';
+import { Products } from './components/sections/Products';
 import { Transformation } from './components/sections/Transformation';
 import { Benefits } from './components/sections/Benefits';
 import { Features } from './components/sections/Features';
@@ -12,57 +14,70 @@ import { Comparison } from './components/sections/Comparison';
 import { FAQ } from './components/sections/FAQ';
 import { ImageStrip } from './components/sections/ImageStrip';
 import { FinalCTA } from './components/sections/FinalCTA';
+import { motion, AnimatePresence } from 'framer-motion';
 
-/**
- * TALISMAN JEWELLERY - 12 Section Conversion Landing Page
- * Engineered for high-end conversion and luxury brand perception.
- */
 const App = () => {
+  const [cartCount, setCartCount] = useState(0);
+  const [toasts, setToasts] = useState<{id: number, msg: string}[]>([]);
+
+  const addToast = (msg: string) => {
+    const id = Date.now();
+    setToasts(prev => [...prev, { id, msg }]);
+    setCartCount(prev => prev + 1);
+    setTimeout(() => {
+      setToasts(prev => prev.filter(t => t.id !== id));
+    }, 3000);
+  };
+
+  useEffect(() => {
+    // Listen for custom events from product buttons
+    const handleAddToCart = () => addToast("Produkt bol pridaný do košíka");
+    window.addEventListener('add-to-cart', handleAddToCart);
+    return () => window.removeEventListener('add-to-cart', handleAddToCart);
+  }, []);
+
   return (
     <div className="bg-bg-primary min-h-screen selection:bg-accent-gold selection:text-bg-primary">
-      {/* 1. Global Navigation */}
-      <Navbar />
+      <Navbar cartCount={cartCount} />
 
       <main>
-        {/* 1. Above the fold (Hero + Proof Bar) */}
         <Hero />
+        
+        {/* Core Product Offering */}
+        <Products />
 
-        {/* 2. The Transformation */}
         <Transformation />
-
-        {/* 3. Deep Benefits (Outcome-led) */}
         <Benefits />
-
-        {/* 4. Features (Scannable Layer) */}
         <Features />
-
-        {/* 5. Mid-page CTA + Proof */}
         <MidCTA />
-
-        {/* 6. What's Included (Uncertainty Removal) */}
         <Inclusions />
-
-        {/* 7. Social Proof (Layered Reviews) */}
         <SocialProof />
-
-        {/* 8. UGC Strip (Social Momentum) */}
         <UGCStrip />
-
-        {/* 9. Comparison Table (Decisive Clarity) */}
         <Comparison />
-
-        {/* 10. FAQ (Objection Handling) */}
         <FAQ />
-
-        {/* 11. Image Strip (Visual Immersion) */}
         <ImageStrip />
-
-        {/* 12. Final CTA (Emotive Close) */}
         <FinalCTA />
       </main>
 
-      {/* Footer & Meta Info */}
       <Footer />
+
+      {/* Mocked Toast System */}
+      <div className="toast-container">
+        <AnimatePresence>
+          {toasts.map(toast => (
+            <motion.div
+              key={toast.id}
+              initial={{ opacity: 0, x: 50, scale: 0.8 }}
+              animate={{ opacity: 1, x: 0, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.8, transition: { duration: 0.2 } }}
+              className="glass px-6 py-4 rounded-2xl border-accent-gold/50 flex items-center gap-4 min-w-[300px]"
+            >
+              <div className="w-2 h-2 rounded-full bg-accent-gold animate-ping" />
+              <p className="text-xs font-bold uppercase tracking-widest">{toast.msg}</p>
+            </motion.div>
+          ))}
+        </AnimatePresence>
+      </div>
     </div>
   );
 };
