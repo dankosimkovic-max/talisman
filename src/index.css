@@ -206,3 +206,37 @@ section {
   flex-direction: column;
   gap: 1rem;
 }
+
+/* Layout Utilities (Replacing missing Tailwind) */
+.u-flex { display: flex; }
+.u-flex-column { display: flex; flex-direction: column; }
+.u-flex-center { display: flex; align-items: center; justify-content: center; }
+.u-flex-between { display: flex; align-items: center; justify-content: space-between; }
+.u-items-center { display: flex; align-items: center; }
+
+.u-gap-4 { gap: 1rem; }
+.u-gap-8 { gap: 2rem; }
+.u-gap-10 { gap: 2.5rem; }
+
+.u-hide-mobile { display: none !important; }
+.u-hide-desktop { display: flex !important; }
+
+@media (min-width: 1024px) {
+  .u-hide-mobile { display: flex !important; }
+  .u-hide-desktop { display: none !important; }
+}
+
+.u-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.u-w-full { width: 100%; }
+.u-text-center { text-align: center; }
