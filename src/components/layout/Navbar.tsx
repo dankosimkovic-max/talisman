@@ -48,7 +48,7 @@ export const Navbar = ({ cartCount = 0 }: { cartCount?: number }) => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed inset-0 z-[100] bg-bg-primary u-flex-column p-[10vw]"
+            className="u-fixed-full z-[100] bg-bg-primary u-flex-column p-[10vw]"
           >
             <div className="u-flex justify-end u-items-center mb-20">
               <button className="text-white p-2" onClick={() => setIsMenuOpen(false)}>

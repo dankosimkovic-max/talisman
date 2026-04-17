@@ -240,3 +240,11 @@ section {
 
 .u-w-full { width: 100%; }
 .u-text-center { text-align: center; }
+
+.u-fixed-full {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
