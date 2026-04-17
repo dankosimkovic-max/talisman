@@ -12,10 +12,10 @@ export const Inclusions = () => (
         />
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {[
-            { t: "Prémiová krabička", d: "Elegantné balenie pre bezpečné uloženie.", i: Package },
-            { t: "Čistiaca handrička", d: "Udržujte váš šperk v dokonalom lesku.", i: Sparkles },
-            { t: "Karta starostlivosti", d: "Tipy, ako predĺžiť životnosť šperku.", i: ShieldCheck },
-            { t: "Zásilkovna", d: "Doručenie priamo k vám.", i: Truck }
+            { t: "Prémiová krabička", d: "Elegantné balenie pre bezpečné uloženie.", icon: Package },
+            { t: "Čistiaca handrička", d: "Udržujte váš šperk v dokonalom lesku.", icon: Sparkles },
+            { t: "Karta starostlivosti", d: "Tipy, ako predĺžiť životnosť šperku.", icon: ShieldCheck },
+            { t: "Zásilkovna", d: "Doručenie priamo k vám.", icon: Truck }
           ].map((item, i) => (
             <GlassCard key={i} delay={i * 0.1}>
               <div className="text-accent-gold mb-6">
