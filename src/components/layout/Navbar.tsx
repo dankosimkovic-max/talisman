@@ -48,25 +48,23 @@ export const Navbar = ({ cartCount = 0 }: { cartCount?: number }) => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed inset-0 z-[60] bg-bg-primary/95 backdrop-blur-xl flex flex-col p-[10vw]"
+            className="fixed inset-0 z-[100] bg-bg-primary flex flex-col p-[10vw]"
           >
-            <div className="flex justify-between items-center mb-20">
-              <div className="text-xl font-bold tracking-[0.2em] uppercase">TALISMAN<span className="text-accent-gold">.</span></div>
+            <div className="flex justify-end items-center mb-20">
               <button className="text-white p-2" onClick={() => setIsMenuOpen(false)}>
-                <X size={32} />
+                <X size={40} />
               </button>
             </div>
 
-            <div className="flex flex-col gap-8 text-4xl font-black uppercase tracking-tighter">
+            <div className="flex flex-col gap-10 text-5xl font-black uppercase tracking-tighter">
               {['Produkty', 'Kolekcie', 'Kvalita', 'Recenzie', 'FAQ'].map((item) => (
                 <motion.a 
                   key={item}
                   href={`#${item.toLowerCase()}`}
                   onClick={() => setIsMenuOpen(false)}
-                  whileHover={{ x: 20, color: '#D4AF37' }}
-                  className="text-white hover:text-accent-gold transition-colors"
+                  className="text-white hover:text-accent-gold transition-colors block"
                 >
-                  {item}
+                  {item}<span className="text-accent-gold">.</span>
                 </motion.a>
               ))}
             </div>

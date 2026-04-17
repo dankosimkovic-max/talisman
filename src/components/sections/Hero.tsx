@@ -3,7 +3,7 @@ import { ArrowRight, Sparkles, Truck, RotateCcw, ShieldCheck, Star } from 'lucid
 import { Button } from '../ui/Button';
 
 export const Hero = () => (
-  <section className="min-h-screen flex flex-col justify-center relative overflow-hidden pt-32">
+  <section className="min-h-screen flex flex-col justify-center relative overflow-hidden pt-40 md:pt-32">
     <div className="container relative z-10 text-center md:text-left">
       <motion.div 
         initial={{ opacity: 0, y: 30 }}
@@ -21,6 +21,7 @@ export const Hero = () => (
         <h1 className="text-5xl md:text-8xl lg:text-[7vw] mb-10 text-gradient">
           Váš osobný <br /> Talisman.
         </h1>
+        <h2 className="sr-only">Talisman Jewellery - Prémiové šperky</h2>
         <p className="text-xl md:text-2xl text-text-secondary max-w-2xl mb-14 uppercase tracking-wide">
           Prémiové šperky, ktoré zachytávajú momenty. Chirurgická oceľ pozlátená 18K zlatom pre nekonečný lesk.
         </p>
